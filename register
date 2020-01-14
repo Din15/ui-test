@@ -1,0 +1,101 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('http://atameken.site/page/as/login?redirect=%2Fpage%2Fas%2Fservice%2Fstep1%3Fservice_id%3D13')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_phone'))
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_phone'), '+7 (771) 123-12-31')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/btn_dalee'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_password'))
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_password'), '123456')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/btn_daleepass'))
+
+WebUI.navigateToUrl('http://atameken.site/page/as/passport/13')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/btn_zakazat'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_opf'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_opf'), 'Индивидуальное предпринимательство (ИП)')
+
+WebUI.click(findTestObject('Atas/signin/label_opf'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_orgname'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_orgname'), '12345')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_ssn'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_ssn'), '990915450319')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/radio_category'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_oked'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_oked'), '01112 Выращивание масличных культур и их семян')
+
+WebUI.delay(2)
+
+WebUI.clickImage(findTestObject('Atas/signin/label_head_name'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_head_name'), 'Ivanov Ivan Ivanovich')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_oblast'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_oblast'), 'г.Нур-Султан')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_oblast'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_raion'), 'район Алматы')
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Atas/signin/label_address'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.sendKeys(findTestObject('Atas/signin/label_address'), 'пушкина1')
+
